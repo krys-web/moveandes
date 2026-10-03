@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MoveAndes</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header / Navegación -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/img/logo.png" alt="MoveAndes Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="cotizacion.html" class="btn-cta">Solicitar Cotización</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner de Sección -->
+    <section style="background: linear-gradient(rgba(11,37,69,0.9), rgba(19,64,116,0.9)), center/cover; color: white; padding: 4rem 2rem; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Contáctanos</h1>
+            <p style="font-size: 1.1rem; color: #f4f6f9;">¿Tienes dudas sobre tu próxima mudanza? Estamos aquí para ayudarte a planificarla de forma segura.</p>
+        </div>
+    </section>
+
+    <!-- Contenido Principal de Contacto -->
+    <main style="max-width: 1200px; margin: 3rem auto; padding: 0 2rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+            
+            <!-- Información de Contacto -->
+            <div>
+                <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem; font-size: 1.8rem;">Información Directa</h2>
+                <p style="color: #666; margin-bottom: 1.5rem;">Comunícate con nuestro equipo a través de nuestros canales oficiales o visítanos en nuestras oficinas.</p>
+                
+                <div style="margin-bottom: 1.2rem;">
+                    <strong style="color: var(--primary-blue); display: block; margin-bottom: 0.2rem;">📍 Dirección:</strong>
+                    <span style="color: #666;">Quito, Ecuador</span>
+                </div>
+
+                <div style="margin-bottom: 1.2rem;">
+                    <strong style="color: var(--primary-blue); display: block; margin-bottom: 0.2rem;">📞 Teléfono / WhatsApp:</strong>
+                    <span style="color: #666;">+593 98 299 6860</span>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--primary-blue); display: block; margin-bottom: 0.2rem;">✉️ Correo Electrónico:</strong>
+                    <span style="color: #666;">contacto@moveandes.com</span>
+                </div>
+
+                <!-- Botón de WhatsApp Directo -->
+                <a href="https://wa.me/593982996860?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios%20de%20mudanza" target="_blank" style="background-color: #25d366; color: white; padding: 0.8rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; display: inline-block;">
+                    💬 Escribir por WhatsApp
+                </a>
+            </div>
+
+            <!-- Formulario de Contacto General -->
+            <div style="background: white; padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <h2 style="color: var(--primary-blue); margin-bottom: 1.5rem; font-size: 1.8rem;">Envíanos un Mensaje</h2>
+                
+                <!-- Nota: Puedes crear un archivo procesar_contacto.php o redirigir consultas generales -->
+                <form action="#" method="POST">
+                    <div style="margin-bottom: 1.2rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Nombre:</label>
+                        <input type="text" name="nombre" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.2rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Correo Electrónico:</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.2rem;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.4rem;">Mensaje:</label>
+                        <textarea name="mensaje" rows="4" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-cta" style="width: 100%; padding: 1rem; border: none; font-size: 1.1rem; cursor: pointer; border-radius: 4px;">Enviar Mensaje</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MoveAndes. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
