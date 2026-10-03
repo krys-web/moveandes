@@ -5,6 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - MoveAndes</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Estilos específicos y modernos para las tarjetas de servicios */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: none; /* Sin bordes de colores rígidos */
+        }
+
+        /* Animación fluida al pasar el cursor (Hover) */
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(11, 37, 69, 0.12);
+        }
+
+        .service-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            color: var(--primary-blue, #0b2545);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-card a {
+            color: var(--accent-orange, #fca311);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .service-card a:hover {
+            color: #0b2545;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,7 +71,7 @@
         <div class="nav-container">
             <div class="logo-container">
                 <a href="index.html">
-                    <img src="assets/img/logo.png" alt="MoveAndes Logo">
+                    <img src="assets/img/logomovimiento.gif" alt="MoveAndes Logo" class="nav-logo">
                 </a>
             </div>
             <nav>
@@ -36,51 +94,65 @@
     </section>
 
     <!-- Listado de Servicios -->
-    <main style="max-width: 1200px; margin: 3rem auto; padding: 0 2rem;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+    <main style="max-width: 1200px; margin: 3.5rem auto; padding: 0 2rem;">
+        <div class="services-grid">
             
-            <!-- Servicio 1 -->
-            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-orange);">
-                <h3 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Mudanzas Residenciales</h3>
-                <p style="color: #666; margin-bottom: 1.5rem;">Trasladamos tu hogar (casas y departamentos) con sumo cuidado, protegiendo cada mueble y pertenencia desde el punto de origen hasta tu nuevo destino.</p>
-                <a href="cotizacion.html" style="color: var(--accent-orange); font-weight: 600; text-decoration: none;">Cotizar este servicio &rarr;</a>
+            <!-- Servicio 1: Mudanzas Residenciales -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🏠</div>
+                    <h3>Mudanzas Residenciales</h3>
+                    <p>Trasladamos tu hogar (casas y departamentos) con sumo cuidado, protegiendo cada mueble y pertenencia desde el punto de origen hasta tu nuevo destino[cite: 1].</p>
+                </div>
+                <a href="cotizacion.html">Cotizar este servicio &rarr;</a>
             </div>
 
-            <!-- Servicio 2 -->
-            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-blue);">
-                <h3 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Mudanzas Corporativas</h3>
-                <p style="color: #666; margin-bottom: 1.5rem;">Especialistas en reubicación de oficinas y empresas. Minimizamos el tiempo de inactividad de tu negocio trasladando escritorios, equipos y archivos con total seguridad.</p>
-                <a href="cotizacion.html" style="color: var(--accent-orange); font-weight: 600; text-decoration: none;">Cotizar este servicio &rarr;</a>
+            <!-- Servicio 2: Mudanzas Corporativas -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🏢</div>
+                    <h3>Mudanzas Corporativas</h3>
+                    <p>Especialistas en reubicación de oficinas y empresas. Minimizamos el tiempo de inactividad de tu negocio trasladando escritorios, equipos y archivos con total seguridad[cite: 1].</p>
+                </div>
+                <a href="cotizacion.html">Cotizar este servicio &rarr;</a>
             </div>
 
-            <!-- Servicio 3 -->
-            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--accent-orange);">
-                <h3 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Empaque y Embalaje</h3>
-                <p style="color: #666; margin-bottom: 1.5rem;">Utilizamos materiales de alta calidad (cartón reforzado, plástico burbuja, film protector) para asegurar que tus artículos más frágiles viajen completamente protegidos.</p>
-                <a href="cotizacion.html" style="color: var(--accent-orange); font-weight: 600; text-decoration: none;">Cotizar este servicio &rarr;</a>
+            <!-- Servicio 3: Empaque y Embalaje -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">📦</div>
+                    <h3>Empaque y Embalaje</h3>
+                    <p>Utilizamos materiales de alta calidad (cartón reforzado, plástico burbuja, film protector) para asegurar que tus artículos más frágiles viajen completamente protegidos[cite: 1].</p>
+                </div>
+                <a href="cotizacion.html">Cotizar este servicio &rarr;</a>
             </div>
 
-            <!-- Servicio 4 -->
-            <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--primary-blue);">
-                <h3 style="color: var(--primary-blue); margin-bottom: 1rem; font-size: 1.5rem;">Transporte de Carga</h3>
-                <p style="color: #666; margin-bottom: 1.5rem;">Servicios de transporte logístico y encomiendas locales o nacionales en flota moderna adaptada para distintos volúmenes y requerimientos comerciales.</p>
-                <a href="cotizacion.html" style="color: var(--accent-orange); font-weight: 600; text-decoration: none;">Cotizar este servicio &rarr;</a>
+            <!-- Servicio 4: Transporte de Carga -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon">🚚</div>
+                    <h3>Transporte de Carga</h3>
+                    <p>Servicios de transporte logístico y encomiendas locales o nacionales en flota moderna adaptada para distintos volúmenes y requerimientos comerciales[cite: 1].</p>
+                </div>
+                <a href="cotizacion.html">Cotizar este servicio &rarr;</a>
             </div>
 
         </div>
 
         <!-- Llamado a la acción inferior -->
-        <div style="background: var(--primary-blue); color: white; text-align: center; padding: 3rem; border-radius: 8px; margin-top: 4rem;">
-            <h2 style="margin-bottom: 1rem;">¿Listo para realizar tu mudanza con profesionales?</h2>
-            <p style="margin-bottom: 1.5rem; color: #f4f6f9;">Recuerda que diseñamos una cotización a tu medida sin costos públicos iniciales.</p>
-            <a href="cotizacion.html" class="btn-cta" style="font-size: 1.1rem; padding: 0.8rem 2rem; display: inline-block; text-decoration: none;">Solicitar Cotización Ahora</a>
+        <div style="background: var(--primary-blue, #0b2545); color: white; text-align: center; padding: 3rem; border-radius: 12px; margin-top: 4rem; box-shadow: 0 8px 25px rgba(11,37,69,0.15);">
+            <h2 style="margin-bottom: 1rem; font-size: 2rem;">¿Listo para realizar tu mudanza con profesionales?</h2>
+            <p style="margin-bottom: 1.5rem; color: #f4f6f9;">Recuerda que diseñamos una cotización a tu medida sin costos públicos iniciales[cite: 1].</p>
+            <a href="cotizacion.html" class="btn-cta" style="font-size: 1.1rem; padding: 0.8rem 2.2rem; display: inline-block; text-decoration: none; border-radius: 6px;">Solicitar Cotización Ahora</a>
         </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 MoveAndes. Todos los derechos reservados.</p>
+        <p>&copy; 2026 MoveAndes. Todos los derechos reservados[cite: 1].</p>
     </footer>
+
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
