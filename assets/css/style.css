@@ -81,3 +81,400 @@ footer {
     padding: 2rem;
     margin-top: 4rem;
 }
+
+/* Asegurar visibilidad de los enlaces dentro del menú móvil desplegado */
+.nav-menu.active li a {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.nav-menu.active li a:hover {
+    color: #fca311 !important; /* Color de acento para hover */
+}
+
+/* ==========================================
+   ESTILOS DEL MENÚ MÓVIL RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    /* Ocultar el menú por defecto en móviles */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0b2545 !important; /* Azul marino sólido y oscuro */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1.5rem 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        gap: 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Mostrar el menú cuando tenga la clase active */
+    .nav-menu.active {
+        display: flex !important;
+    }
+
+    /* Estilo de los enlaces dentro del menú móvil */
+    .nav-menu li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.8rem;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu li a {
+        color: #ffffff !important; /* Letras blancas obligatorias */
+        font-size: 1.1rem !important;
+        font-weight: 500;
+        display: block;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .nav-menu li a:hover {
+        color: #fca311 !important; /* Color de acento al pasar el ratón */
+    }
+
+    /* Ajustar el botón de llamada a la acción (Cotización) en móviles */
+    .nav-menu .btn-cta {
+        background-color: #fca311 !important;
+        color: #0b2545 !important;
+        text-align: center;
+        padding: 0.8rem !important;
+        border-radius: 4px;
+        font-weight: 700;
+    }
+}
+
+/* ==========================================
+   MENÚ HAMBURGUESA ANIMADO A "X" (VERSIÓN CORREGIDA)
+   ========================================== */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        background: none !important;
+        border: none !important;
+        cursor: pointer;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centrar líneas verticalmente */
+        width: 35px;
+        height: 30px;
+        position: relative;
+        z-index: 10000;
+        font-size: 0 !important; /* Ocultar texto previo */
+    }
+
+    /* Dibujar las 3 líneas del menú hamburguesa */
+    .mobile-menu-btn::before,
+    .mobile-menu-btn::after,
+    .mobile-menu-btn span {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #0b2545; /* Color oscuro inicial (barras) */
+        border-radius: 3px;
+        transition: all 0.4s ease-in-out; /* Transición suave */
+        position: absolute;
+        left: 0;
+    }
+
+    /* Posicionamiento inicial de las 3 barras */
+    .mobile-menu-btn::before {
+        top: 5px; /* Barra superior */
+    }
+    
+    .mobile-menu-btn span {
+        top: 14px; /* Barra central */
+    }
+
+    .mobile-menu-btn::after {
+        top: 23px; /* Barra inferior */
+    }
+
+    /* ==========================================
+       ESTILOS CUANDO ESTÁ ACTIVO (LA "X")
+       ========================================== */
+    
+    /* Forzamos que las líneas de la X SIEMPRE SE VEAN BLANCAS 
+       cuando el menú está abierto (sobre fondo azul oscuro) */
+    .mobile-menu-btn.is-active::before,
+    .mobile-menu-btn.is-active::after,
+    .mobile-menu-btn.is-active span {
+        background-color: #030303 !important; 
+    }
+
+    /* Animación hacia la "X" */
+    .mobile-menu-btn.is-active::before {
+        top: 14px;
+        transform: rotate(45deg);
+    }
+
+    .mobile-menu-btn.is-active span {
+        opacity: 0; /* La barra central desaparece */
+        transform: scale(0);
+    }
+
+    .mobile-menu-btn.is-active::after {
+        top: 14px;
+        transform: rotate(-45deg);
+    }
+}
+
+/* ==========================================
+   LOGO MUCHO MÁS GRANDE EN LA NAVEGACIÓN
+   ========================================== */
+.logo-container img {
+    height: 150px !important;
+    width: auto !important;  
+    max-height: none !important; 
+    display: block;
+    object-fit: contain;
+}
+
+
+@media (max-width: 768px) {
+    .logo-container img {
+        height: 60px !important;
+    }
+}
+
+/* ==========================================
+   ESTILOS NUEVOS PARA INDEX.HTML
+   ========================================== */
+
+/* Banner Principal (Hero) */
+.hero-section {
+    background: linear-gradient(rgba(11,37,69,0.85), rgba(19,64,116,0.85)), url('../img/banner.jpeg') center/cover no-repeat;
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #f4f6f9;
+    margin-bottom: 2rem;
+}
+
+.hero-btn {
+    background-color: #fca311;
+    color: #0b2545;
+    padding: 0.9rem 2.2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/* 1. Carrusel Continuo (Infinite Marquee) */
+.marquee-container {
+    overflow: hidden;
+    background: #f4f6f9;
+    padding: 3rem 0;
+    position: relative;
+    width: 100%;
+}
+
+.marquee-title-box {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.marquee-title-box h2 {
+    color: var(--primary-blue, #0b2545);
+    font-size: 2rem;
+}
+
+.marquee-title-box p {
+    color: #666;
+}
+
+.marquee-track {
+    display: flex;
+    width: calc(250px * 16);
+    animation: scrollMarquee 35s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    width: 250px;
+    height: 160px;
+    margin: 0 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    flex-shrink: 0;
+}
+
+.marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes scrollMarquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 8)); }
+}
+
+/* 2. Sección Requisitos (Grilla en Zig-Zag) */
+.requirements-section {
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-title-center h2 {
+    color: var(--primary-blue, #0b2545);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title-center p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.requirement-card {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3.5rem;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.requirement-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.requirement-img {
+    flex: 1;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.requirement-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.requirement-card:hover .requirement-img img {
+    transform: scale(1.05);
+}
+
+.requirement-content {
+    flex: 1;
+}
+
+.requirement-content h3 {
+    color: var(--primary-blue, #0b2545);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.requirement-content p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+/* 3. Sección Cobertura Quito y Nacional */
+.coverage-section {
+    background: linear-gradient(rgba(11,37,69,0.92), rgba(19,64,116,0.92)), url('../img/hero-bg.jpg') center/cover;
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.coverage-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.coverage-container h2 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.coverage-container > p {
+    font-size: 1.1rem;
+    color: #f4f6f9;
+}
+
+.coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 3rem auto 0 auto;
+    text-align: left;
+}
+
+.coverage-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.coverage-box h3 {
+    color: #fca311;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.coverage-box p {
+    color: #f4f6f9;
+    line-height: 1.6;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+    .requirement-card, 
+    .requirement-card:nth-child(even) {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .requirement-img {
+        width: 100%;
+        height: 200px;
+    }
+}
