@@ -73,15 +73,6 @@ header {
     background-color: #d95312;
 }
 
-/* Footer */
-footer {
-    background-color: var(--primary-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 2rem;
-    margin-top: 4rem;
-}
-
 /* Asegurar visibilidad de los enlaces dentro del menú móvil desplegado */
 .nav-menu.active li a {
     color: #ffffff !important;
@@ -531,4 +522,79 @@ footer {
         transform: scale(1);
         opacity: 0;
     }
+}
+
+/* ==========================================
+   NUEVOS ESTILOS DEL FOOTER (3 Columnas)
+   ========================================== */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 4rem 2rem 2rem 2rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-col h3 {
+    color: #fca311;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-col p, .footer-col a {
+    color: #f4f6f9;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.footer-col a:hover {
+    color: #fca311;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.footer-social-links a {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-social-links a:hover {
+    background: #fca311; 
+    color: #0b2545;    
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 0.9rem;
+    color: #a0aec0;
 }
