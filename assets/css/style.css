@@ -36,12 +36,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
 }
 
-.logo-container img {
-    height: 50px;
-    width: auto;
+.logo-container img.nav-logo {
+    height: 110px !important; 
+    width: auto !important;
+    max-height: none !important;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-menu {
@@ -144,6 +147,9 @@ header {
         border-radius: 4px;
         font-weight: 700;
     }
+    .logo-container img.nav-logo {
+        height: 70px !important;
+    }
 }
 
 /* ==========================================
@@ -223,60 +229,67 @@ header {
 }
 
 /* ==========================================
-   LOGO MUCHO MÁS GRANDE EN LA NAVEGACIÓN
+   ESTILOS DE LA SECCIÓN HERO (Sin fondo blanco en textos)
    ========================================== */
-.logo-container img {
-    height: 150px !important;
-    width: auto !important;  
-    max-height: none !important; 
-    display: block;
-    object-fit: contain;
-}
-
-
-@media (max-width: 768px) {
-    .logo-container img {
-        height: 60px !important;
-    }
-}
-
-/* ==========================================
-   ESTILOS NUEVOS PARA INDEX.HTML
-   ========================================== */
-
-/* Banner Principal (Hero) */
 .hero-section {
-    background: linear-gradient(rgba(11,37,69,0.85), rgba(19,64,116,0.85)), url('../img/banner.jpeg') center/cover no-repeat;
-    color: white;
-    padding: 6rem 2rem;
+    background: url('../img/banner.jpeg') center/cover no-repeat;
+    color: var(--text-dark, #333333);
+    min-height: 85vh;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
 }
 
 .hero-content {
-    max-width: 800px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    flex: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: #f4f6f9;
-    margin-bottom: 2rem;
+    order: 1; /* Título en la parte superior */
+    font-size: 2.8rem;
+    margin-top: 0;
+    color: var(--primary-blue, #0b2545);
+    background: none; /* Sin fondo blanco */
+    padding: 0;
+    box-shadow: none;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8); /* Sutil sombra para mantener legibilidad sobre la foto clara */
 }
 
 .hero-btn {
+    order: 2; /* Botón ubicado en el margen inferior del banner */
     background-color: #fca311;
     color: #0b2545;
-    padding: 0.9rem 2.2rem;
+    padding: 0.9rem 2.5rem;
     border-radius: 6px;
     font-weight: 700;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: inline-block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: auto 0 1rem 0;
+    align-self: center;
+}
+
+.hero-content p {
+    order: 3; /* Párrafo de garantía ubicado al final */
+    font-size: 1.05rem;
+    color: #222222;
+    font-weight: 600;
+    background: none; /* Sin fondo blanco */
+    padding: 0;
+    box-shadow: none;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9); /* Sutil sombra para contraste */
+    align-self: center;
+    margin-bottom: 0.5rem;
 }
 
 /* 1. Carrusel Continuo (Infinite Marquee) */
@@ -731,6 +744,7 @@ footer {
     cursor: pointer;
     font-weight: 600;
 }
+
 
 /* Responsivo para móviles */
 @media (max-width: 480px) {
