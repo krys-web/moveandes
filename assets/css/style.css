@@ -598,3 +598,176 @@ footer {
     font-size: 0.9rem;
     color: #a0aec0;
 }
+
+/* ==========================================
+   ESTILOS DEL CHAT FLOTANTE (APILADO SOBRE WHATSAPP A LA DERECHA)
+   ========================================== */
+.chat-widget-btn {
+    position: fixed;
+    bottom: 100px; /* Eleva el botón para dejar espacio al de WhatsApp abajo */
+    right: 30px;   /* Alineado a la derecha, justo encima del de WhatsApp */
+    background-color: var(--primary-blue, #0b2545);
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    transition: transform 0.3s ease;
+}
+
+.chat-widget-btn:hover {
+    transform: scale(1.1);
+}
+
+.chat-box-container {
+    position: fixed;
+    bottom: 175px; /* Ventana desplegada arriba del botón */
+    right: 30px;   /* Alineada también a la derecha */
+    width: 360px;
+    height: 480px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.chat-box-container.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.chat-header {
+    background-color: var(--primary-blue, #0b2545);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: #f8f9fa;
+}
+
+.chat-message {
+    max-width: 80%;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.chat-message.bot {
+    background: #e2e8f0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-message.user {
+    background: var(--accent-orange, #fca311);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 0.8rem;
+    background: white;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+.chat-input-area button {
+    background-color: var(--primary-blue, #0b2545);
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+    .chat-box-container {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 95px;
+        height: 420px;
+    }
+}
+
+/* ==========================================
+   ESTILOS PARA BOTONES INTERACTIVOS EN EL CHAT
+   ========================================== */
+.chat-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.chat-option-btn {
+    background-color: #ffffff;
+    color: var(--primary-blue, #0b2545);
+    border: 1px solid var(--primary-blue, #0b2545);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.chat-option-btn:hover {
+    background-color: var(--primary-blue, #0b2545);
+    color: #ffffff;
+}
